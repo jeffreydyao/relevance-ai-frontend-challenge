@@ -6,7 +6,7 @@ interface StatusProps {
 
 export function Completed() {
   return (
-    <div className="w-full flex items-center gap-2">
+    <div className="flex items-center gap-2">
       {CompletedIcon}
       <span className="text-[0.8125rem] font-medium">Completed</span>
     </div>

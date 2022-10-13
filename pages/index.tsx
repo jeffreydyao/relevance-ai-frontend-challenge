@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col justify-center w-full px-8 py-8 max-w-[1144px] items-center">
+      <main className="flex flex-col justify-center w-full px-8 py-8 max-w-[1144px] items-center gap-6">
         <div className="flex w-full justify-between items-center px-3">
           <h1 className="font-semibold text-2xl text-[#313A53]">
             Workflows history
@@ -54,7 +54,7 @@ const Home: NextPage = () => {
 
         <div className="w-full h-max px-8 py-2 rounded-lg border border-indigo-100">
           <table className="table-auto w-full">
-            <thead className="border-b-[1px] border-indigo-100">
+            <thead>
               <tr className="text-[0.8125rem] text-[#9CA4BA] text-left">
                 <th className="pb-3">Workflow / dataset</th>
                 <th className="pb-3">Status</th>
@@ -65,29 +65,30 @@ const Home: NextPage = () => {
 
             <tbody>
               {data.results.map((item) => (
-                <tr key={item.id} className="border-b-[1px] border-indigo-100">
+                <tr key={item.id} className="border-t-[1px] border-indigo-100">
                   <td className="py-6">
                     <Workflow
                       name={item.params.workflow_name}
                       datasetId={item.params.dataset_id}
                     />
                   </td>
-                  <td className="py-6 text-[0.8125rem] text-[#1A2136]">
+                  <td className="py-6 text-[0.8125rem] text-[#1A2136] flex gap-4 items-center">
                     <Status type={item.status} />
+                    {item.status === "completed" ? (
+                      <button className="px-3 py-2 border border-green-500 text-green-500 text-xs font-medium rounded flex items-center fill-green-500 gap-2 hover:bg-green-50 transition-all">
+                        Rerun
+                      </button>
+                    ) : null}
                   </td>
                   <td className="py-6 text-[0.8125rem] text-[#1A2136]">
                     {dayjs(item.creation_time).format("YYYY.MM.DD. hh:mm:ss")}
                   </td>
                   <td className="py-6 text-[0.8125rem] text-[#1A2136] flex items-center gap-4">
-                    <button className="px-3 py-2 border border-indigo-600 text-indigo-600 text-xs font-medium rounded flex items-center fill-indigo-600 gap-2 hover:bg-indigo-50 hover:fill-indigo-500 transition-all">
+                    <button className="px-3 py-2 border border-indigo-600 text-indigo-600 text-xs font-medium rounded flex items-center fill-indigo-600 gap-2 hover:bg-indigo-50  transition-all">
                       {FileIcon}
                       Copy workflow ID
                     </button>
-                    <Button color="sky">
-                      {FileIcon}
-                      Copy workflow ID
-                    </Button>
-                    <button className="px-3 py-2 border border-indigo-600 text-indigo-600 text-xs font-medium rounded flex items-center fill-indigo-600 gap-2 hover:bg-indigo-50 hover:fill-indigo-500 transition-all">
+                    <button className="px-3 py-2 border border-indigo-600 text-indigo-600 text-xs font-medium rounded flex items-center fill-indigo-600 gap-2 hover:bg-indigo-50  transition-all">
                       {ViewIcon}
                       View Parameters
                     </button>
