@@ -48,9 +48,9 @@ const Home: NextPage = () => {
             <div className="text-gray-700 text-[0.8125rem] font-medium flex items-center gap-1">
               <p>Sort by:</p>
 
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 relative">
                 <select
-                  className="appearance-none w-min"
+                  className="appearance-none bg-transparent pr-7"
                   onChange={(o) => {
                     let data = { ...mockData };
 
@@ -88,7 +88,7 @@ const Home: NextPage = () => {
                   <option>Workflow (A-Z)</option>
                   <option>Dataset ID (A-Z)</option>
                 </select>
-                <ChevronDown />
+                <ChevronDown className="absolute right-0 -z-10" />
               </div>
             </div>
           </aside>
@@ -98,9 +98,9 @@ const Home: NextPage = () => {
           <table className="table-auto w-full">
             <thead>
               <tr className="text-[0.8125rem] text-[#9CA4BA] text-left">
-                <th className="pb-3">Workflow / dataset</th>
-                <th className="pb-3">Status</th>
-                <th className="pb-3">Created at</th>
+                <th className="pt-4 pb-3 font-medium">Workflow / dataset</th>
+                <th className="pt-4 pb-3 font-medium">Status</th>
+                <th className="pt-4 pb-3 font-medium">Created at</th>
                 <th />
               </tr>
             </thead>
@@ -138,7 +138,7 @@ const Home: NextPage = () => {
                   <td className="py-6 text-[0.8125rem] text-[#1A2136]">
                     {dayjs(item.creation_time).format("YYYY.MM.DD. hh:mm:ss")}
                   </td>
-                  <td className="py-6 text-[0.8125rem] text-[#1A2136] flex items-center gap-4">
+                  <td className="py-6 text-[0.8125rem] text-[#1A2136] flex justify-end items-center gap-4">
                     <button
                       className="px-3 py-2 border border-indigo-600 text-indigo-600 text-xs font-medium rounded flex items-center fill-indigo-600 gap-2 hover:bg-indigo-50  transition-all"
                       onClick={() => {
