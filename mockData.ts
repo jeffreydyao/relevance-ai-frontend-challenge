@@ -1,4 +1,20 @@
-export const data = {
+interface Params {
+  workflow_name: string;
+  dataset_id: string;
+}
+
+interface Result {
+  id: string;
+  params: Params;
+  status: "error" | "running" | "completed";
+  creation_time: string;
+}
+
+interface Data {
+  results: Result[];
+}
+
+export const data: Data = {
   results: [
     {
       id: "ODYyNTU1MGM0NGM5LTRlZjctYjE1Zi1jNGQyYjk3OTBhMWQ-205ec28e-1",
