@@ -1,4 +1,4 @@
-import { ClusterIcon, TaggingIcon, VectorizeIcon } from "../icons";
+import { ClusterIcon, TaggingIcon, VectorizeIcon } from "./icons";
 
 interface WorkflowProps {
   // This type is too brittle and wouldn't scale (i.e adding all the individual types).
@@ -38,7 +38,7 @@ export default function Workflow(props: WorkflowProps) {
   return (
     <div className="flex gap-3 items-center">
       <div className="rounded-lg bg-indigo-100 w-8 h-8">{icon}</div>
-      <div className="flex-col h-full justify-between text-semibold text-[0.8125rem]  ">
+      <div className="flex-col h-full justify-between text-[0.8125rem] font-semibold">
         <p className="text-gray-800">{props.name}</p>
         <p className="text-[#9CA4BA]">{props.datasetId}</p>
       </div>
