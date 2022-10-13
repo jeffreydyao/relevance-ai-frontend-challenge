@@ -1,8 +1,15 @@
-import ChevronDown from "@iconscout/react-unicons/icons/uil-angle-down";
-import Link from "@iconscout/react-unicons/icons/uil-link";
-import Help from "@iconscout/react-unicons/icons/uil-question-circle";
-import Database from "@iconscout/react-unicons/icons/uil-database";
+const ChevronDown = dynamic(
+  () => import("@iconscout/react-unicons/icons/uil-angle-down")
+);
+const Link = dynamic(() => import("@iconscout/react-unicons/icons/uil-link"));
+const Help = dynamic(
+  () => import("@iconscout/react-unicons/icons/uil-question-circle")
+);
+const Database = dynamic(
+  () => import("@iconscout/react-unicons/icons/uil-database")
+);
 import { Logo } from "./icons";
+import dynamic from "next/dynamic";
 
 export default function Navbar() {
   return (
