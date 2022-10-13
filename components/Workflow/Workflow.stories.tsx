@@ -12,3 +12,7 @@ export const Tagging = () => (
   <Workflow name="AI tagging" datasetId="new-dataset" />
 );
 Tagging.storyName = "AI tagging";
+
+export const Default = () => (
+  <Workflow name="Stable Diffusion" datasetId="museum-dataset" />
+);
