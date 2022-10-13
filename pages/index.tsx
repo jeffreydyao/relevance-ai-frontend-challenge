@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import { data } from "../mockData";
 const ChevronDown = dynamic(
   () => import("@iconscout/react-unicons/icons/uil-angle-down"),
   { ssr: false }
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex justify-center w-full px-8 py-8 max-w-[1144px] items-center">
+      <main className="flex flex-col justify-center w-full px-8 py-8 max-w-[1144px] items-center">
         <div className="flex w-full justify-between items-center px-3">
           <h1 className="font-semibold text-2xl text-[#313A53]">
             Workflows history
@@ -44,6 +45,33 @@ const Home: NextPage = () => {
               </button>
             </div>
           </aside>
+        </div>
+
+        <div className="w-full h-max px-8 py-2 rounded-lg border border-indigo-100">
+          <table className="table-auto w-full">
+            <thead className="border-b-[1px] border-indigo-100">
+              <tr className="text-[0.8125rem] text-[#9CA4BA] text-left">
+                <th className="pb-3">Workflow / dataset</th>
+                <th className="pb-3">Status</th>
+                <th className="pb-3">Created at</th>
+                <th />
+              </tr>
+            </thead>
+
+            <tbody>
+              {data.results.map((item) => (
+                <tr key={item.id}>
+                  <td>
+                    {item.params.workflow_name}
+                    {item.params.dataset_id}
+                  </td>
+                  <td>{item.status}</td>
+                  <td>{item.creation_time}</td>
+                  <td>Buttons here</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </main>
     </div>
