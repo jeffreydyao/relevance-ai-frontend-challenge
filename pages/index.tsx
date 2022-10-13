@@ -1,6 +1,10 @@
+import dayjs from "dayjs";
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { FileIcon, ViewIcon } from "../components/icons";
 import Status from "../components/Status";
 import Workflow from "../components/Workflow";
 import { data } from "../mockData";
@@ -12,11 +16,6 @@ const Refresh = dynamic(
   () => import("@iconscout/react-unicons/icons/uil-redo"),
   { ssr: false }
 );
-import dayjs from "dayjs";
-import { FileIcon, ViewIcon } from "../components/icons";
-import Button from "../components/Button";
-import { useState } from "react";
-import toast from "react-hot-toast";
 
 const Home: NextPage = () => {
   const [mockData, setMockData] = useState(data);
@@ -48,10 +47,49 @@ const Home: NextPage = () => {
             </div>
             <div className="text-gray-700 text-[0.8125rem] font-medium flex items-center gap-1">
               <p>Sort by:</p>
-              <button className="flex items-center gap-1">
-                latest
+
+              <div className="flex items-center gap-1">
+                <select
+                  className="appearance-none w-min"
+                  onChange={(o) => {
+                    let data = { ...mockData };
+
+                    if (o.target.value === "Latest") {
+                      data.results.sort(
+                        (a, b) =>
+                          Number(new Date(a.creation_time)) -
+                          Number(new Date(b.creation_time))
+                      );
+                    } else if (o.target.value === "Oldest") {
+                      data.results.sort(
+                        (a, b) =>
+                          Number(new Date(b.creation_time)) -
+                          Number(new Date(a.creation_time))
+                      );
+                    } else if (o.target.value === "Workflow (A-Z)") {
+                      data.results.sort((a, b) =>
+                        a.params.workflow_name.localeCompare(
+                          b.params.workflow_name
+                        )
+                      );
+                    } else if (o.target.value === "Dataset ID (A-Z)") {
+                      data.results.sort((a, b) =>
+                        a.params.dataset_id.localeCompare(b.params.dataset_id)
+                      );
+                    }
+
+                    if (data !== mockData) {
+                      setMockData(data);
+                    }
+                  }}
+                >
+                  <option>Latest</option>
+                  <option>Oldest</option>
+                  <option>Workflow (A-Z)</option>
+                  <option>Dataset ID (A-Z)</option>
+                </select>
                 <ChevronDown />
-              </button>
+              </div>
             </div>
           </aside>
         </div>
