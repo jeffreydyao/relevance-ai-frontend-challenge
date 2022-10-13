@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 # Relevance AI Frontend Challenge 🥊
 
 Hi! Here's my code for the frontend challenge. Here, I'll walk you through my thinking and process. But first ...
