@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import Status from "../components/Status";
 import Workflow from "../components/Workflow";
 import { data } from "../mockData";
 const ChevronDown = dynamic(
@@ -69,10 +70,10 @@ const Home: NextPage = () => {
                     />
                   </td>
                   <td className="py-6 text-[0.8125rem] text-[#1A2136]">
-                    {item.status}
+                    <Status type={item.status} />
                   </td>
                   <td className="py-6 text-[0.8125rem] text-[#1A2136]">
-                    {item.creation_time}
+                    {new Date(item.creation_time).getHours()}
                   </td>
                   <td className="py-6 text-[0.8125rem] text-[#1A2136]">
                     Buttons here

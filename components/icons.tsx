@@ -352,3 +352,96 @@ export const TaggingIcon = (
     </defs>
   </svg>
 );
+
+/**
+ * State icons
+ */
+export const CompletedIcon = (
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 14 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7 0.333328C3.33333 0.333328 0.333328 3.33333 0.333328 7C0.333328 10.6667 3.33333 13.6667 7 13.6667C10.6667 13.6667 13.6667 10.6667 13.6667 7C13.6667 3.33333 10.6667 0.333328 7 0.333328ZM9.8 5.86666L6.59999 9.06666C6.33333 9.33333 5.93333 9.33333 5.66666 9.06666L4.2 7.59999C3.93333 7.33333 3.93333 6.93333 4.2 6.66666C4.46666 6.4 4.86666 6.4 5.13333 6.66666L6.13333 7.66666L8.86666 4.93333C9.13333 4.66666 9.53333 4.66666 9.8 4.93333C10.0667 5.19999 10.0667 5.6 9.8 5.86666Z"
+      fill="#14B8A6"
+    />
+  </svg>
+);
+
+export const Spinner = (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="animate-spin"
+  >
+    <g clip-path="url(#clip0_1_318)">
+      <path
+        d="M8 1.33334V4"
+        stroke="#A5B4FC"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M8 12V14.6667"
+        stroke="#A5B4FC"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M3.28667 3.28667L5.17333 5.17333"
+        stroke="#A5B4FC"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M10.8267 10.8267L12.7133 12.7133"
+        stroke="#A5B4FC"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M1.33333 8H3.99999"
+        stroke="#A5B4FC"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M12 8H14.6667"
+        stroke="#A5B4FC"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M3.28667 12.7133L5.17333 10.8267"
+        stroke="#A5B4FC"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M10.8267 5.17333L12.7133 3.28667"
+        stroke="#A5B4FC"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_1_318">
+        <rect width="16" height="16" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);
