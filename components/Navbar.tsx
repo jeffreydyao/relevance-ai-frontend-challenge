@@ -1,10 +1,15 @@
-import Link from "next/link";
-import Image from "next/image";
+import ChevronDown from "@iconscout/react-unicons/icons/uil-angle-down";
+import Link from "@iconscout/react-unicons/icons/uil-link";
+import Help from "@iconscout/react-unicons/icons/uil-question-circle";
+import Database from "@iconscout/react-unicons/icons/uil-database";
 
 export default function Navbar() {
   return (
-    <header className="h-[3.75rem] w-screen bg-indigo-700 px-[0.875rem] py-5 flex">
-      <h1>
+    <header className="h-[3.75rem] w-screen bg-indigo-700 px-[0.875rem] py-[0.625rem] flex items-center">
+      <a
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        aria-label="Dashboard"
+      >
         <svg
           width="20"
           height="20"
@@ -29,30 +34,49 @@ export default function Navbar() {
             fill="#80A1FF"
           />
         </svg>
-      </h1>
-      <nav>
-        <ul className="flex font-medium text-[0.8125rem] gap-9">
+      </a>
+      <nav className="flex flex-grow ml-14">
+        <ul className="flex font-medium text-[0.8125rem] gap-6 items-center">
           <li>
-            <button className="text-white">Dashboards</button>
+            <button className="text-white flex gap-1 items-center">
+              Dashboards
+              <ChevronDown />
+            </button>
           </li>
           <li>
-            <button className="text-white">Dataset</button>
+            <button className="text-white flex gap-1 items-center">
+              Dataset
+              <ChevronDown />
+            </button>
           </li>
           <li>
-            <button className="text-white">Apps</button>
+            <button className="text-white flex gap-1 items-center">
+              Apps
+              <ChevronDown />
+            </button>
           </li>
           <li>
             <button className="text-white">Workflows</button>
           </li>
         </ul>
       </nav>
-      <p className="text-indigo-300 font-medium text-[0.8125rem]">
-        Saved 1 min ago
-      </p>
-      <button className="font-medium text-[0.8125rem] text-white">Share</button>
-      <button className="h-10 px-3 py-[0.3125rem] bg-indigo-600 rounded text-white font-medium text-[0.8125rem] flex gap-1">
-        <p>sample-dataset</p>
-      </button>
+      <aside className="flex gap-6 items-center">
+        <p className="text-indigo-300 font-medium text-[0.8125rem]">
+          Saved 1 min ago
+        </p>
+        <button className="font-medium text-[0.8125rem] text-white flex gap-1 items-center">
+          <Link size="12" />
+          Share
+        </button>
+        <button className="text-white" aria-label="Help center">
+          <Help />
+        </button>
+        <button className="h-10 pl-3 pr-2 py-[0.3125rem] bg-indigo-600 rounded text-white font-medium text-[0.8125rem] flex gap-2 items-center">
+          <Database size="16" />
+          <p>sample-dataset</p>
+          <ChevronDown />
+        </button>
+      </aside>
     </header>
   );
 }

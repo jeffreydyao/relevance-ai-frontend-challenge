@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@fontsource/noto-sans': ^4.5.11
+  '@iconscout/react-unicons': ^1.1.6
   '@ladle/react': ^2.4.4
   '@types/node': 18.8.5
   '@types/react': 18.0.21
@@ -21,6 +22,7 @@ specifiers:
 
 dependencies:
   '@fontsource/noto-sans': 4.5.11
+  '@iconscout/react-unicons': 1.1.6_react@18.2.0
   '@ladle/react': 2.4.4_biqbaboplfbrettd7655fr4n2y
   next: 12.3.1_6tziyx3dehkoeijunclpkpolha
   react: 18.2.0
@@ -1387,6 +1389,14 @@ packages:
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
+
+  /@iconscout/react-unicons/1.1.6_react@18.2.0:
+    resolution: {integrity: sha512-BnyVvBew7Vm1lvL8+qyqjchUbkVHlDyNAlN+r5b+0P0KrkQ66BHPBuJEJ2faT89L8qRu+TohE7dHMV+bndje3Q==}
+    peerDependencies:
+      react: '>=15.0.0 <17.0.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
