@@ -4,7 +4,7 @@ interface WorkflowProps {
   // This type is too brittle and wouldn't scale (i.e adding all the individual types).
   // This is only for the purposes of this challenge to keep things simple.
   // In production, this would be a string and an additional 'iconUrl' string would be added.
-  name: "Vectorize" | "Cluster" | "AI tagging";
+  name: string | "Vectorize" | "Cluster" | "AI tagging";
   datasetId: string;
 }
 

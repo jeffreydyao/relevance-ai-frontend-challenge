@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import Workflow from "../components/Workflow/Workflow";
 import { data } from "../mockData";
 const ChevronDown = dynamic(
   () => import("@iconscout/react-unicons/icons/uil-angle-down"),
@@ -62,8 +63,10 @@ const Home: NextPage = () => {
               {data.results.map((item) => (
                 <tr key={item.id}>
                   <td>
-                    {item.params.workflow_name}
-                    {item.params.dataset_id}
+                    <Workflow
+                      name={item.params.workflow_name}
+                      datasetId={item.params.dataset_id}
+                    />
                   </td>
                   <td>{item.status}</td>
                   <td>{item.creation_time}</td>
