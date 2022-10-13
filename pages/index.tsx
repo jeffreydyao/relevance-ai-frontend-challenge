@@ -15,8 +15,11 @@ const Refresh = dynamic(
 import dayjs from "dayjs";
 import { FileIcon, ViewIcon } from "../components/icons";
 import Button from "../components/Button";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+  const [mockData, setMockData] = useState(data);
+
   return (
     <div className="flex flex-col h-screen w-screen items-center">
       <Head>
@@ -64,7 +67,7 @@ const Home: NextPage = () => {
             </thead>
 
             <tbody>
-              {data.results.map((item) => (
+              {mockData.results.map((item, i) => (
                 <tr key={item.id} className="border-t-[1px] border-indigo-100">
                   <td className="py-6">
                     <Workflow
@@ -75,7 +78,20 @@ const Home: NextPage = () => {
                   <td className="py-6 text-[0.8125rem] text-[#1A2136] flex gap-4 items-center">
                     <Status type={item.status} />
                     {item.status === "completed" ? (
-                      <button className="px-3 py-2 border border-green-500 text-green-500 text-xs font-medium rounded flex items-center fill-green-500 gap-2 hover:bg-green-50 transition-all">
+                      <button
+                        className="px-3 py-2 border border-green-500 text-green-500 text-xs font-medium rounded flex items-center fill-green-500 gap-2 hover:bg-green-50 transition-all"
+                        onClick={() => {
+                          const data = { ...mockData };
+                          data.results[i].status = "running";
+                          setMockData(data);
+
+                          setTimeout(() => {
+                            const data = { ...mockData };
+                            data.results[i].status = "completed";
+                            setMockData(data);
+                          }, 5000);
+                        }}
+                      >
                         Rerun
                       </button>
                     ) : null}
