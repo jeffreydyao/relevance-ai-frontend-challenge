@@ -12,6 +12,7 @@
     "@fontsource/noto-sans": "^4.5.11",
     "@iconscout/react-unicons": "^1.1.6",
     "@ladle/react": "^2.4.4",
+    "dayjs": "^1.11.5",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"

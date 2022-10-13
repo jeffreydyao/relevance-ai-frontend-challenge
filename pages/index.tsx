@@ -12,6 +12,9 @@ const Refresh = dynamic(
   () => import("@iconscout/react-unicons/icons/uil-redo"),
   { ssr: false }
 );
+import dayjs from "dayjs";
+import { FileIcon, ViewIcon } from "../components/icons";
+import Button from "../components/Button";
 
 const Home: NextPage = () => {
   return (
@@ -73,10 +76,21 @@ const Home: NextPage = () => {
                     <Status type={item.status} />
                   </td>
                   <td className="py-6 text-[0.8125rem] text-[#1A2136]">
-                    {new Date(item.creation_time).getHours()}
+                    {dayjs(item.creation_time).format("YYYY.MM.DD. hh:mm:ss")}
                   </td>
-                  <td className="py-6 text-[0.8125rem] text-[#1A2136]">
-                    Buttons here
+                  <td className="py-6 text-[0.8125rem] text-[#1A2136] flex items-center gap-4">
+                    <button className="px-3 py-2 border border-indigo-600 text-indigo-600 text-xs font-medium rounded flex items-center fill-indigo-600 gap-2 hover:bg-indigo-50 hover:fill-indigo-500 transition-all">
+                      {FileIcon}
+                      Copy workflow ID
+                    </button>
+                    <Button color="sky">
+                      {FileIcon}
+                      Copy workflow ID
+                    </Button>
+                    <button className="px-3 py-2 border border-indigo-600 text-indigo-600 text-xs font-medium rounded flex items-center fill-indigo-600 gap-2 hover:bg-indigo-50 hover:fill-indigo-500 transition-all">
+                      {ViewIcon}
+                      View Parameters
+                    </button>
                   </td>
                 </tr>
               ))}
