@@ -16,6 +16,7 @@ import dayjs from "dayjs";
 import { FileIcon, ViewIcon } from "../components/icons";
 import Button from "../components/Button";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Home: NextPage = () => {
   const [mockData, setMockData] = useState(data);
@@ -100,7 +101,17 @@ const Home: NextPage = () => {
                     {dayjs(item.creation_time).format("YYYY.MM.DD. hh:mm:ss")}
                   </td>
                   <td className="py-6 text-[0.8125rem] text-[#1A2136] flex items-center gap-4">
-                    <button className="px-3 py-2 border border-indigo-600 text-indigo-600 text-xs font-medium rounded flex items-center fill-indigo-600 gap-2 hover:bg-indigo-50  transition-all">
+                    <button
+                      className="px-3 py-2 border border-indigo-600 text-indigo-600 text-xs font-medium rounded flex items-center fill-indigo-600 gap-2 hover:bg-indigo-50  transition-all"
+                      onClick={() => {
+                        navigator.clipboard.writeText(item.id);
+                        toast.success("Copied to clipboard", {
+                          position: "top-center",
+                          className: "text-xs",
+                          icon: "📋",
+                        });
+                      }}
+                    >
                       {FileIcon}
                       Copy workflow ID
                     </button>
