@@ -21,18 +21,18 @@ const Home: NextPage = () => {
   const [mockData, setMockData] = useState(data);
 
   return (
-    <div className="flex flex-col h-screen w-screen items-center">
+    <div className="flex flex-col items-center w-screen h-screen">
       <Head>
         <title>History - Workflows</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="flex flex-col justify-center w-full px-8 py-8 max-w-[1144px] items-center gap-6">
-        <div className="flex w-full justify-between items-center px-3">
+        <div className="flex items-center justify-between w-full px-3">
           <h1 className="font-semibold text-2xl text-[#313A53]">
             Workflows history
           </h1>
-          <aside className="flex gap-7 items-center">
+          <aside className="flex items-center gap-7">
             <button className="text-gray-700 text-[0.8125rem] flex gap-2 items-center">
               <Refresh size={12} />
               Refresh
@@ -48,9 +48,9 @@ const Home: NextPage = () => {
             <div className="text-gray-700 text-[0.8125rem] font-medium flex items-center gap-1">
               <p>Sort by:</p>
 
-              <div className="flex items-center gap-1 relative">
+              <div className="relative flex items-center gap-1">
                 <select
-                  className="appearance-none bg-transparent pr-7"
+                  className="bg-transparent appearance-none pr-7"
                   onChange={(o) => {
                     let data = { ...mockData };
 
@@ -94,8 +94,8 @@ const Home: NextPage = () => {
           </aside>
         </div>
 
-        <div className="w-full h-max px-8 py-2 rounded-lg border border-indigo-100">
-          <table className="table-auto w-full">
+        <div className="w-full px-8 py-2 border border-indigo-100 rounded-lg h-max">
+          <table className="w-full table-auto">
             <thead>
               <tr className="text-[0.8125rem] text-[#9CA4BA] text-left">
                 <th className="pt-4 pb-3 font-medium">Workflow / dataset</th>
@@ -118,7 +118,7 @@ const Home: NextPage = () => {
                     <Status type={item.status} />
                     {item.status === "completed" ? (
                       <button
-                        className="px-3 py-2 border border-green-500 text-green-500 text-xs font-medium rounded flex items-center fill-green-500 gap-2 hover:bg-green-50 transition-all"
+                        className="flex items-center gap-2 px-3 py-2 text-xs font-medium text-green-500 transition-all border border-green-500 rounded fill-green-500 hover:bg-green-50"
                         onClick={() => {
                           const data = { ...mockData };
                           data.results[i].status = "running";
@@ -140,12 +140,12 @@ const Home: NextPage = () => {
                   </td>
                   <td className="py-6 text-[0.8125rem] text-[#1A2136] flex justify-end items-center gap-4">
                     <button
-                      className="px-3 py-2 border border-indigo-600 text-indigo-600 text-xs font-medium rounded flex items-center fill-indigo-600 gap-2 hover:bg-indigo-50  transition-all"
+                      className="flex items-center gap-2 px-3 py-2 text-xs font-medium text-indigo-600 transition-all border border-indigo-600 rounded fill-indigo-600 hover:bg-indigo-50"
                       onClick={() => {
                         navigator.clipboard.writeText(item.id);
                         toast.success("Copied to clipboard", {
                           position: "top-center",
-                          className: "text-xs",
+                          className: "text-xs font-medium",
                           icon: "📋",
                         });
                       }}
@@ -153,7 +153,7 @@ const Home: NextPage = () => {
                       {FileIcon}
                       Copy workflow ID
                     </button>
-                    <button className="px-3 py-2 border border-indigo-600 text-indigo-600 text-xs font-medium rounded flex items-center fill-indigo-600 gap-2 hover:bg-indigo-50  transition-all">
+                    <button className="flex items-center gap-2 px-3 py-2 text-xs font-medium text-indigo-600 transition-all border border-indigo-600 rounded fill-indigo-600 hover:bg-indigo-50">
                       {ViewIcon}
                       View Parameters
                     </button>

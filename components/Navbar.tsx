@@ -1,20 +1,4 @@
-import dynamic from "next/dynamic";
-const ChevronDown = dynamic(
-  () => import("@iconscout/react-unicons/icons/uil-angle-down"),
-  { ssr: false }
-);
-const Link = dynamic(() => import("@iconscout/react-unicons/icons/uil-link"), {
-  ssr: false,
-});
-const Help = dynamic(
-  () => import("@iconscout/react-unicons/icons/uil-question-circle"),
-  { ssr: false }
-);
-const Database = dynamic(
-  () => import("@iconscout/react-unicons/icons/uil-database"),
-  { ssr: false }
-);
-import { Logo } from "./icons";
+import { ChevronDown, Database, Help, Link, Logo } from "./icons";
 
 export default function Navbar() {
   return (
@@ -28,21 +12,21 @@ export default function Navbar() {
       <nav className="flex flex-grow ml-14">
         <ul className="flex font-medium text-[0.8125rem] gap-6 items-center">
           <li>
-            <button className="flex items-center gap-1 text-white">
+            <button className="flex items-center gap-2 text-white">
               Dashboards
-              <ChevronDown />
+              {ChevronDown}
             </button>
           </li>
           <li>
-            <button className="flex items-center gap-1 text-white">
+            <button className="flex items-center gap-2 text-white">
               Dataset
-              <ChevronDown />
+              {ChevronDown}
             </button>
           </li>
           <li>
-            <button className="flex items-center gap-1 text-white">
+            <button className="flex items-center gap-2 text-white">
               Apps
-              <ChevronDown />
+              {ChevronDown}
             </button>
           </li>
           <li>
@@ -54,17 +38,17 @@ export default function Navbar() {
         <p className="text-indigo-300 font-medium text-[0.8125rem]">
           Saved 1 min ago
         </p>
-        <button className="font-medium text-[0.8125rem] text-white flex gap-1 items-center">
-          <Link size="12" />
+        <button className="font-medium text-[0.8125rem] text-white flex gap-2 items-center">
+          {Link}
           Share
         </button>
         <button className="text-white" aria-label="Help center">
-          <Help />
+          {Help}
         </button>
-        <button className="h-10 pl-3 pr-2 py-[0.3125rem] bg-indigo-600 rounded text-white font-medium text-[0.8125rem] flex gap-2 items-center">
-          <Database size="16" />
+        <button className="h-10 px-3 py-[0.3125rem] bg-indigo-600 rounded text-white font-medium text-[0.8125rem] flex gap-2 items-center">
+          {Database}
           sample-dataset
-          <ChevronDown />
+          {ChevronDown}
         </button>
       </aside>
     </header>
