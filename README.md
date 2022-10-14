@@ -1,6 +1,13 @@
 # Relevance AI Frontend Challenge 🥊
 
-Hi! Here's my code for the frontend challenge. Here, I'll walk you through my thinking and process. But first ...
+[Live Demo](https://relevance-ai-frontend-challenge.vercel.app/)
+
+## Functionality implemented
+
+- Design as per Figma file
+- Workflow history sorting (latest, oldest, workflow name and dataset_id from A-Z)
+- Mock workflow re-runs
+- Copy workflow ID
 
 ## Getting Started
 
@@ -18,7 +25,7 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To view components in isolation (Ladle), run Ladle:
+Stories have been written for each component using Ladle. To view them, run Ladle:
 
 ```bash
 pnpm ladle serve
@@ -26,12 +33,14 @@ pnpm ladle serve
 
 [http://localhost:61000](http://localhost:61000) opens in your browser automatically.
 
+[Trunk](https://trunk.io) is used for linting and formatting - it integrates Prettier, ESLint and other static analysis tools together. Check the docs for more info on how to use. The executable `./trunk` has been included in the repo.
+
 ## Thinking and process
 
 > **Note**
-> Please note that I completed this challenge slowly over the course of an evening while somewhat tired.
+> Please note that I completed this challenge slowly over the course of an evening / morning while travelling, so was constrained by time and fatigue.
 
-Having poked around the product, this seems like a new design for the Workflows History page. I approached this challenge from the perspective of it
+Having poked around the product, this seems like a new design for the Workflows History page! I approached this challenge from the perspective of it
 being a prototype that demonstrates core functionality.
 
 Next.js / React and TypeScript were used as I'm most comfortable with them at the moment. Tailwind CSS was used as it's what's currently used
@@ -76,8 +85,17 @@ From here, I implemented the sort functionality using a native select element ve
 
 After that, I simplified my Tailwind CSS styling by removing unnecessary utilities then linted and formatted my code.
 
-## Things I'd improve
+## Things I'd improve / do if I had more time
 
-These tips are moreso for
+- **Implement a custom Select component using a primitive component library**. [Radix Primitives](https://www.radix-ui.com/docs/primitives/components/select) is the go-to for React as it it has a great API / accessibility built in to build on top of. The Vue equivalent would probably either be [Zag](https://zagjs.com/) or [Headless UI](https://headlessui.com/)
+- **Implement View Parameters**. Although I didn't have time to implement this, the UX pattern would probably look like either of the three:
+  - Code block that appears underneath the buttons (mocked up in the Figma file)
+  - Modal (not a big fan, breaks flow)
+  - Floating window (could be interesting)
+- **Implement switching between different datasets**. In practice this wouldn't be too difficult, but for the purposes of the prototype it was unnecessary.
+- **Implement the navbar dropdowns**. It'd be cool to do something like the [Stripe](https://stripe.com/au) website!
 
-`TODO`
+## Reflection
+
+Ultimately, I was constrained by time and the fact that I'm travelling, but think that I've demonstrated my ability to recreate designs fast, implement functionality which is necessary for prototyping and building ideas, and brainstorm different directions for UX - harking back to what I said in my interview
+about being passionate about both code and design. FIN!
