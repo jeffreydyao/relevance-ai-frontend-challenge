@@ -8,8 +8,8 @@ export function Logo() {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M5.36478 6.47058H4.63309C2.07431 6.47058 0 8.59065 0 11.2059V15.2647C0 17.8799 2.07431 20 4.63309 20H8.60432C11.1631 20 13.2374 17.8799 13.2374 15.2647V14.9619C8.8736 14.8835 5.35971 11.2435 5.35971 6.7647C5.35971 6.66624 5.36141 6.5682 5.36478 6.47058ZM6.76873 6.47058C6.76465 6.5681 6.76259 6.66615 6.76259 6.7647C6.76259 10.4516 9.64844 13.4496 13.2374 13.5278V11.2059C13.2374 8.59065 11.1631 6.47058 8.60432 6.47058H6.76873Z"
         fill="white"
       />
@@ -18,8 +18,8 @@ export function Logo() {
         fill="#CBD8FF"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M13.2381 13.5278V11.2059C13.2381 8.59065 11.1638 6.47058 8.60503 6.47058H6.76945C6.76537 6.5681 6.76331 6.66615 6.76331 6.7647C6.76331 10.4516 9.64916 13.4496 13.2381 13.5278Z"
         fill="#80A1FF"
       />
@@ -39,7 +39,7 @@ export const VectorizeIcon = (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_33_136)">
+    <g clipPath="url(#clip0_33_136)">
       <path
         d="M20.9235 2.64626e-07H11.0766C9.62187 -0.000317734 8.18137 0.285969 6.83736 0.842505C5.49335 1.39904 4.27215 2.21492 3.24354 3.24354C2.21492 4.27215 1.39904 5.49335 0.842505 6.83736C0.285969 8.18137 -0.000317734 9.62187 2.64626e-07 11.0766V20.9235C0.000641988 23.8609 1.16784 26.6779 3.24496 28.755C5.32207 30.8322 8.13906 31.9994 11.0766 32H20.9235C23.8609 31.9994 26.6779 30.8322 28.755 28.755C30.8322 26.6779 31.9994 23.8609 32 20.9235V11.0766C31.9997 8.13896 30.8326 5.32179 28.7554 3.2446C26.6782 1.16741 23.861 0.000321189 20.9235 2.64626e-07Z"
         fill="url(#paint0_radial_33_136)"
@@ -96,8 +96,8 @@ export const VectorizeIcon = (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(0.432073 0.033888) rotate(45) scale(45.1864)"
       >
-        <stop stop-color="#2EBA56" />
-        <stop offset="1" stop-color="#0BB88E" />
+        <stop stopColor="#2EBA56" />
+        <stop offset="1" stopColor="#0BB88E" />
       </radialGradient>
       <linearGradient
         id="paint1_linear_33_136"
@@ -107,8 +107,8 @@ export const VectorizeIcon = (
         y2="21.9389"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#4B79FE" />
-        <stop offset="1" stop-color="#1854FF" />
+        <stop stopColor="#4B79FE" />
+        <stop offset="1" stopColor="#1854FF" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_33_136"
@@ -118,8 +118,8 @@ export const VectorizeIcon = (
         y2="34.0696"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#4B79FE" />
-        <stop offset="1" stop-color="#1854FF" />
+        <stop stopColor="#4B79FE" />
+        <stop offset="1" stopColor="#1854FF" />
       </linearGradient>
       <clipPath id="clip0_33_136">
         <rect width="32" height="32" fill="white" />
@@ -136,14 +136,14 @@ export const ClusterIcon = (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_33_173)">
+    <g clipPath="url(#clip0_33_173)">
       <path
         d="M20.9235 2.64626e-07H11.0765C9.62187 -0.000317734 8.18138 0.285969 6.83736 0.842505C5.49335 1.39904 4.27215 2.21492 3.24354 3.24354C2.21492 4.27215 1.39904 5.49335 0.842503 6.83736C0.285967 8.18137 -0.000317734 9.62187 2.64627e-07 11.0766V20.9234C0.000641988 23.8609 1.16784 26.6779 3.24495 28.755C5.32207 30.8322 8.13906 31.9994 11.0765 32H20.9235C23.8609 31.9994 26.6779 30.8322 28.755 28.755C30.8322 26.6779 31.9994 23.8609 32 20.9234V11.0766C31.9997 8.13896 30.8326 5.32179 28.7554 3.2446C26.6782 1.16741 23.861 0.000321189 20.9235 2.64626e-07V2.64626e-07Z"
         fill="url(#paint0_radial_33_173)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M18.1676 0H17.7767L13.508 10.6905L1.49107 5.53101C1.42934 5.63631 1.37003 5.7416 1.31073 5.84932L13.3016 11.0001L4.73158 20.7757L0.145226 9.28653C0.105287 9.52859 0.0713963 9.77065 0.0484009 10.0212L4.44054 21.0263L0.171853 22.8732C0.197269 22.9955 0.220262 23.1165 0.242048 23.2375L4.57248 21.3654L8.41512 31.6756C8.55551 31.7107 8.6959 31.7422 8.83872 31.7713L4.92043 21.2453L21.7945 17.1082L16.7284 24.9263L10.1228 31.9516C10.279 31.9649 10.4339 31.9758 10.5912 31.9831L16.8923 25.2772L23.833 31.603C23.9697 31.5655 24.1065 31.5268 24.242 31.482L17.1183 24.9888L22.2802 17.0154L31.7567 18.6312L26.9156 30.2354C27.1028 30.116 27.2863 29.9909 27.4663 29.8602L32.0012 18.9918V17.6605L31.8306 18.2753L22.4195 16.6788L25.2511 6.05979L29.7646 4.40665C29.6883 4.30499 29.6097 4.20454 29.5298 4.1065L25.2006 5.68835L22.8914 0.179119C22.751 0.153703 22.6106 0.129498 22.469 0.110133L24.8634 5.82643L13.9434 10.5841L18.1676 0ZM13.6589 11.1536L13.7077 11.1746L13.7497 11.0694L24.8276 6.23879L22.0454 16.6729L5.19673 20.8028L13.6589 11.1536Z"
         fill="#E1E8FE"
       />
@@ -217,8 +217,8 @@ export const ClusterIcon = (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(0.219063 0.033888) rotate(45) scale(45.1864)"
       >
-        <stop stop-color="#9920A4" />
-        <stop offset="1" stop-color="#9B1AC8" />
+        <stop stopColor="#9920A4" />
+        <stop offset="1" stopColor="#9B1AC8" />
       </radialGradient>
       <clipPath id="clip0_33_173">
         <rect width="32" height="32" fill="white" />
@@ -264,14 +264,14 @@ export const TaggingIcon = (
       fill="#80A1FF"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M24.2708 11.8596C24.268 11.8596 24.2652 11.8596 24.2623 11.8596C22.1571 11.8596 20.4505 10.153 20.4505 8.04782C20.4505 8.04739 20.4505 8.04697 20.4505 8.04654H23.5702C23.6622 8.04654 23.7533 8.06466 23.8383 8.09987C23.9233 8.13508 24.0006 8.18669 24.0656 8.25176C24.1307 8.31682 24.1823 8.39406 24.2175 8.47906C24.2527 8.56407 24.2708 8.65518 24.2708 8.74719V11.8596Z"
       fill="#CBD8FF"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M16.3188 16.6328H13.3546C12.3348 16.6326 11.3347 16.9136 10.4643 17.445C9.59385 17.9764 8.88684 18.7376 8.421 19.6448C7.92204 20.6121 7.1499 21.4116 6.20046 21.944L4.82579 22.7148V30.0662C5.22802 30.3418 5.64734 30.5899 6.08082 30.8091L6.08067 30.8094C6.11939 30.8288 6.15821 30.8481 6.19714 30.8671C6.91181 31.218 7.66385 31.491 8.44037 31.6805L8.44858 31.6781C9.3055 31.8856 10.1871 31.9908 11.0748 31.9892H20.9202C22.0567 31.99 23.1867 31.817 24.271 31.4761V16.627H16.565C16.4828 16.6268 16.4007 16.6288 16.3188 16.6328Z"
       fill="url(#paint1_linear_33_223)"
     />
@@ -280,8 +280,8 @@ export const TaggingIcon = (
       fill="#FCD34D"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M4.826 11.457V30.0648C4.66349 29.9537 4.50389 29.8372 4.34751 29.7169C3.17786 28.8201 2.19735 27.7 1.46316 26.4211V25.816C1.72201 25.6774 1.9384 25.4712 2.08928 25.2193C2.24016 24.9674 2.31987 24.6793 2.31991 24.3857V24.2647C2.32001 23.9133 2.39913 23.5664 2.55141 23.2497C2.70369 22.9329 2.92524 22.6545 3.19965 22.435C3.4741 22.2152 3.69565 21.9366 3.84792 21.6197C3.99846 21.3064 4.07749 20.9636 4.07937 20.6161V11.457H4.826Z"
       fill="url(#paint2_linear_33_223)"
     />
@@ -300,8 +300,8 @@ export const TaggingIcon = (
     <path
       d="M23.0767 7.95982L24.1343 9.01866L26.4795 6.42056"
       stroke="white"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M29.7686 13.6559H29.7303C28.6925 13.6559 28.167 12.8759 28.1199 11.8854L28.1158 11.7383C28.1158 12.7975 27.5904 13.6559 26.5013 13.6559H26.5387C27.6131 13.6559 28.1329 14.4928 28.1532 15.537V15.4643V15.6106C28.1337 14.5379 28.6648 13.6559 29.7686 13.6559Z"
@@ -324,8 +324,8 @@ export const TaggingIcon = (
         y2="19.9062"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FEF3C7" />
-        <stop offset="1" stop-color="#FCD34D" />
+        <stop stopColor="#FEF3C7" />
+        <stop offset="1" stopColor="#FCD34D" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_33_223"
@@ -335,8 +335,8 @@ export const TaggingIcon = (
         y2="12.3432"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#A9BEFD" />
-        <stop offset="0.778063" stop-color="#A9BEFD" stop-opacity="0" />
+        <stop stopColor="#A9BEFD" />
+        <stop offset="0.778063" stopColor="#A9BEFD" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_33_223"
@@ -346,8 +346,8 @@ export const TaggingIcon = (
         y2="26.0775"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#CBD8FF" stop-opacity="0" />
-        <stop offset="1" stop-color="#A9BEFD" />
+        <stop stopColor="#CBD8FF" stopOpacity="0" />
+        <stop offset="1" stopColor="#A9BEFD" />
       </linearGradient>
     </defs>
   </svg>
@@ -380,62 +380,62 @@ export const Spinner = (
     xmlns="http://www.w3.org/2000/svg"
     className="animate-spin"
   >
-    <g clip-path="url(#clip0_1_318)">
+    <g clipPath="url(#clip0_1_318)">
       <path
         d="M8 1.33334V4"
         stroke="#A5B4FC"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M8 12V14.6667"
         stroke="#A5B4FC"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M3.28667 3.28667L5.17333 5.17333"
         stroke="#A5B4FC"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10.8267 10.8267L12.7133 12.7133"
         stroke="#A5B4FC"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M1.33333 8H3.99999"
         stroke="#A5B4FC"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M12 8H14.6667"
         stroke="#A5B4FC"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M3.28667 12.7133L5.17333 10.8267"
         stroke="#A5B4FC"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10.8267 5.17333L12.7133 3.28667"
         stroke="#A5B4FC"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </g>
     <defs>

@@ -17,7 +17,7 @@ export function Running() {
   return (
     <div className="w-full max-w-[180px] flex items-center justify-center border border-indigo-100 bg-indigo-50 gap-3 px-3 py-1 rounded">
       {Spinner}
-      <span className="text-indigo-400 font-medium text-xs">In progress</span>
+      <span className="text-xs font-medium text-indigo-400">In progress</span>
     </div>
   );
 }
