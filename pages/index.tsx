@@ -1,16 +1,9 @@
 import dayjs from "dayjs";
 import type { NextPage } from "next";
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import {
-  ChevronDown,
-  ChevronDownDark,
-  FileIcon,
-  Refresh,
-  ViewIcon,
-} from "../components/icons";
+import { ChevronDown, FileIcon, Refresh, ViewIcon } from "../components/icons";
 import Status from "../components/Status";
 import Workflow from "../components/Workflow";
 import { data } from "../mockData";
@@ -31,25 +24,26 @@ const Home: NextPage = () => {
             Workflows history
           </h1>
           <aside className="flex items-center gap-7">
-            <button className="text-gray-700 text-[0.8125rem] flex gap-2 items-center">
+            <button className="text-gray-700 text-[0.8125rem] flex gap-2 items-center ">
               {Refresh}
               Refresh
             </button>
 
             <div className="text-gray-700 text-[0.8125rem] font-medium flex items-center gap-1">
-              <p>Dataset:</p>
-              <button className="flex items-center gap-1">
+              <span>Dataset:</span>
+              <button className="flex items-center gap-1 ">
                 sample-dataset
-                {ChevronDown}
+                <ChevronDown />
               </button>
             </div>
             <div className="text-gray-700 text-[0.8125rem] font-medium flex items-center gap-1">
-              <p>Sort by:</p>
+              <span>Sort by:</span>
 
               <div className="relative flex items-center gap-1">
                 <select
-                  className="pr-5 bg-transparent appearance-none"
+                  className="pr-5 bg-transparent appearance-none cursor-pointer"
                   onChange={(o) => {
+                    // Sort on a duplicate copy of the original data
                     let data = { ...mockData };
 
                     if (o.target.value === "Latest") {
@@ -75,7 +69,7 @@ const Home: NextPage = () => {
                         a.params.dataset_id.localeCompare(b.params.dataset_id)
                       );
                     }
-
+                    // Only re-render if data is different to what's displayed
                     if (data !== mockData) {
                       setMockData(data);
                     }
@@ -86,7 +80,9 @@ const Home: NextPage = () => {
                   <option>Workflow (A-Z)</option>
                   <option>Dataset ID (A-Z)</option>
                 </select>
-                <div className="absolute right-0">{ChevronDownDark}</div>
+                <div className="absolute right-0">
+                  <ChevronDown />
+                </div>
               </div>
             </div>
           </aside>
@@ -112,18 +108,20 @@ const Home: NextPage = () => {
                       datasetId={item.params.dataset_id}
                     />
                   </td>
-                  <td className="py-6 text-[0.8125rem] text-[#1A2136] flex gap-4 items-center">
+                  <td className="py-6 pr-8 text-[0.8125rem] text-[#1A2136] flex gap-4 items-center">
                     <Status type={item.status} />
+                    {/* Only display 'Rerun' button when status is completed. */}
                     {item.status === "completed" ? (
                       <button
                         className="flex items-center gap-2 px-3 py-2 text-xs font-medium text-green-500 transition-all border border-green-500 rounded fill-green-500 hover:bg-green-50"
                         onClick={() => {
-                          const data = { ...mockData };
+                          // Updating state in React re-renders the map
+                          let data = { ...mockData };
                           data.results[i].status = "running";
                           setMockData(data);
-
+                          // This violates DRY, but didn't have time to re-factor
                           setTimeout(() => {
-                            const data = { ...mockData };
+                            data = { ...mockData };
                             data.results[i].status = "completed";
                             setMockData(data);
                           }, 5000);

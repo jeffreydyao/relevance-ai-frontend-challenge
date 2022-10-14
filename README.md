@@ -74,18 +74,10 @@ Ultimately, I decided on a toast at the top of the screen, inspired by [Raycast]
 
 From here, I implemented the sort functionality using a native select element versus the custom Select component used in the product. The reasoning behind this was that it was easy to mock, but also that it utilised pre-existing UI patterns built into the user's OS, meaning less maintenance required.
 
-As a final touch, I implemented the View parameters modal.
-
-- Status
-
-- Button
-
-- Sort functionality
-
-- Copy to clipboard
-
-- View parameters modal
+After that, I simplified my Tailwind CSS styling by removing unnecessary utilities then linted and formatted my code.
 
 ## Things I'd improve
+
+These tips are moreso for
 
 `TODO`

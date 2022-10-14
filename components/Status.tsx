@@ -1,6 +1,7 @@
 import { CompletedIcon, Spinner } from "./icons";
 
 interface StatusProps {
+  /** An action can either be running, completed or end in an error. */
   type: "error" | "running" | "completed";
 }
 
@@ -28,7 +29,7 @@ export function Running() {
  * ## API
  * - `type` - 'running' | 'completed'` - An action can
  * either be running, completed or halt with an error.
- * > Error state hasn't been implemented in the mock.
+ * **Error state hasn't been implemented in the mock.**
  */
 export default function Status(props: StatusProps) {
   let status;
