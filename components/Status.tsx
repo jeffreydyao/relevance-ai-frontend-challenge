@@ -1,7 +1,7 @@
 import { CompletedIcon, Spinner } from "./icons";
 
 interface StatusProps {
-  type: "running" | "completed";
+  type: "error" | "running" | "completed";
 }
 
 export function Completed() {

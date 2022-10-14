@@ -4,18 +4,16 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { FileIcon, ViewIcon } from "../components/icons";
+import {
+  ChevronDown,
+  ChevronDownDark,
+  FileIcon,
+  Refresh,
+  ViewIcon,
+} from "../components/icons";
 import Status from "../components/Status";
 import Workflow from "../components/Workflow";
 import { data } from "../mockData";
-const ChevronDown = dynamic(
-  () => import("@iconscout/react-unicons/icons/uil-angle-down"),
-  { ssr: false }
-);
-const Refresh = dynamic(
-  () => import("@iconscout/react-unicons/icons/uil-redo"),
-  { ssr: false }
-);
 
 const Home: NextPage = () => {
   const [mockData, setMockData] = useState(data);
@@ -34,7 +32,7 @@ const Home: NextPage = () => {
           </h1>
           <aside className="flex items-center gap-7">
             <button className="text-gray-700 text-[0.8125rem] flex gap-2 items-center">
-              <Refresh size={12} />
+              {Refresh}
               Refresh
             </button>
 
@@ -42,7 +40,7 @@ const Home: NextPage = () => {
               <p>Dataset:</p>
               <button className="flex items-center gap-1">
                 sample-dataset
-                <ChevronDown />
+                {ChevronDown}
               </button>
             </div>
             <div className="text-gray-700 text-[0.8125rem] font-medium flex items-center gap-1">
@@ -50,7 +48,7 @@ const Home: NextPage = () => {
 
               <div className="relative flex items-center gap-1">
                 <select
-                  className="bg-transparent appearance-none pr-7"
+                  className="pr-5 bg-transparent appearance-none"
                   onChange={(o) => {
                     let data = { ...mockData };
 
@@ -88,7 +86,7 @@ const Home: NextPage = () => {
                   <option>Workflow (A-Z)</option>
                   <option>Dataset ID (A-Z)</option>
                 </select>
-                <ChevronDown className="absolute right-0 -z-10" />
+                <div className="absolute right-0">{ChevronDownDark}</div>
               </div>
             </div>
           </aside>
