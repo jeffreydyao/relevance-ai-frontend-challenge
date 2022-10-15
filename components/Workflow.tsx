@@ -37,7 +37,11 @@ export default function Workflow(props: WorkflowProps) {
 
   return (
     <div className="flex items-center gap-3">
-      <div className="w-8 h-8 bg-indigo-100 rounded-lg">{icon}</div>
+      {icon ? (
+        <>{icon}</>
+      ) : (
+        <div className="w-8 h-8 bg-indigo-100 rounded-lg" />
+      )}
       <div className="flex-col h-full justify-between text-[0.8125rem] font-semibold">
         <p className="text-gray-800">{props.name}</p>
         <span className="text-[#9CA4BA]">{props.datasetId}</span>
