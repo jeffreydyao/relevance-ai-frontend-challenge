@@ -1,6 +1,8 @@
 # Relevance AI Frontend Challenge 🥊
 
-[Live Demo](https://relevance-ai-frontend-challenge.vercel.app/)
+## Live Demos
+- [App](https://relevance-ai-frontend-challenge.vercel.app/) - https://relevance-ai-frontend-challenge.vercel.app/
+- [Ladle (component stories)](https://relevance-ai-frontend-challenge-ladle.vercel.app/) - https://relevance-ai-frontend-challenge-ladle.vercel.app/
 
 ## Functionality implemented
 
